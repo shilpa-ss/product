@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" style="padding-left: 400px;">
+    <div class="col-lg-md-6">
+      <h1>List of Items</h1>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let item of products">
+          <a [routerLink]="['/product-details/',item.id]">{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

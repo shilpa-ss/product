@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>The Product working</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-lg-4">
+      {{getTitle()}}
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-lg-5" (click)="divParent()">
+      <button (click)="onclickhere($event)">Event Propogation</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="form-group">
+        <label>Enter a new Product</label>
+        <input type="text" class="form-control" [(ngModel)]="newProduct">
+        <label>New Product:{{newProduct}}</label>
+        <!-- <input type="text" class="form-control" #product (keyup.enter)="onKeyUp(product.value)" > -->
+
+      </div>
+
+      <button [style.borderColor]="isActive?'blue':'red'" (click)="onbutton()" class="btn btn-outline-primary"
+        [disabled]="isDisabled">Add New Product</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-lg-4">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let item of products">
+          {{item}}
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-lg-4">
+      <img src={{imgsrc}} class="img">
+    </div>
+    <div class="col-lg-4">
+      <!-- <img src={{imgOnline}} width="400" height="400"> -->
+      <img [src]="imgOnline" class="img">
+    </div>
+
+  </div>
+
+</div>

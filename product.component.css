@@ -1,0 +1,14 @@
+p{
+    color:purple;
+}
+
+h1{
+    color: blue;
+    font-size: 25px;
+}
+
+.img{
+  width:100%;
+  max-width: 400px;
+  height: auto;
+}
